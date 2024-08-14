@@ -1,45 +1,43 @@
-import java.util.ArrayList;
 import java.util.Scanner;
+
 public class Manager {
+    public static void main(String[] args) {
+        Reviews reviews = new Reviews();
+        Scanner scanner = new Scanner(System.in);
 
-    private Course course;
-
-    public Manager(){
-        course = new Course();
-    }
-
-    public void inputController(Scanner scnr){
-        String first;  // first name
-        String last;   // last name
-        double gpa;    // grade point average
-
-        first = scnr.next();
-        //while ( first != -1) error
-        while( !first.equals("-1")) {
-            last = scnr.next();
-            gpa = scnr.nextDouble();
-            course.addStudent(new Student(first, last, gpa));
-            scnr.nextLine(); //dump new line
-            first = scnr.next();
+        // Loop to enter reviews
+        while (true) {
+            System.out.print("Type rating comments. To end: -1\n");
+            int rating = scanner.nextInt();
+            if (rating == -1) break;
+            scanner.nextLine(); // consume the newline
+            String comment = scanner.nextLine();
+            reviews.addReviews(new Review(rating, comment));
         }
-    }
 
-    public void contentPrinter(ArrayList<Student> list){
-        System.out.println("Dean's list:");
-        for (Student student: list) {
-            System.out.println(student);
+        // Print the average rating
+        System.out.println("Average rating:");
+        System.out.println(reviews.getAverageRating());
+
+        // Print the highest review
+        System.out.println("Highest Review:");
+        System.out.println(reviews.highestReview());
+
+        // Print the lowest review
+        System.out.println("Lowest Review:");
+        System.out.println(reviews.lowestReview());
+
+        // Loop to search for specific ratings
+        while (true) {
+            System.out.print("Type rating. To end: -1\n");
+            int searchRating = scanner.nextInt();
+            if (searchRating == -1) break;
+
+            for (Review r : reviews.commentsForRating(searchRating)) {
+                System.out.println(r);
+            }
         }
-    }
 
-
-    public static void main(String args[]) {
-
-        ArrayList<Student> deanList = new ArrayList<Student>();
-        Scanner scnr = new Scanner(System.in);
-        Manager manager = new Manager();
-        manager.inputController(scnr);
-        deanList = manager.course.getDeansList();
-        manager.contentPrinter(deanList);
-
+        System.out.println("Process finished with exit code 0");
     }
 }

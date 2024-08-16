@@ -1,9 +1,6 @@
 import org.junit.*;
 /****************************************************
  * JUnit Test for Review Class
- *
- * @author  Resendiz
- * @version February 2021
  ****************************************************/
 public class MyReviewJUnitTest {
     /******************************************************

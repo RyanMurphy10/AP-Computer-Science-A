@@ -1,9 +1,6 @@
 import org.junit.*;
 /****************************************************
  * MyPlaneTestPhase1 - to test the class Plane Phase1
- *
- * @author  Jonnathan Resendiz
- * @version Summer 2021
  ****************************************************/
 public class MyPlaneTestPhase1 {
     /** fuel tank capacity  */

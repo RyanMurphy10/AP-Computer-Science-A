@@ -4,9 +4,6 @@ import java.util.Random;
 
 /***************************************************
  * MyPlaneTestPhase1 - to test the class Plane Phase1
- *
- * @author  Jonnathan Resendiz
- * @version Winter 2024
  ****************************************************/
 public class MyPlaneTestPhase3 {
     /** fuel tank capacity  */

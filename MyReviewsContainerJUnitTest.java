@@ -3,9 +3,6 @@ import java.util.ArrayList;
 import static org.junit.Assert.*;
 /****************************************************
  * To test Reviews Container Class
- *
- * @author  Resendiz
- * @version February 2021
  ****************************************************/
 public class MyReviewsContainerJUnitTest {
 

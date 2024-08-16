@@ -2,9 +2,6 @@ import org.junit.*;
 import java.text.DecimalFormat;
 /****************************************************
  * MyPlaneTestPhase1 - to test the class Plane Phase1
- *
- * @author  Jonnathan Resendiz
- * @version Summer 2021
  ****************************************************/
 public class MyPlaneTestPhase2 {
     /** fuel tank capacity  */
